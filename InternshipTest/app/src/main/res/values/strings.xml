@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Internship Test</string>
+    <string name="icon">Icon</string>
+    <string name="vpn_location_service">VPN LOCATION SERVICE</string>
+    <string name="time">Time</string>
+    <string name="money">Money</string>
+    <string name="today">Today</string>
+    <string name="this_month">This Month</string>
+    <string name="setting">Setting</string>
+    <string name="line">Line</string>
+</resources>

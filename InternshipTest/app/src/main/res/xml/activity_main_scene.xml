@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+        android:id="@+id/startToEnd"
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="6000">
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:onTouchUp="autoComplete"
+            app:touchAnchorId="@id/card"
+            app:touchAnchorSide="bottom"
+            app:touchRegionId="@id/card" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/card">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="0"
+                android:translationY="0dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card1">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="0"
+                android:translationY="0dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card2">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="0"
+                android:translationY="0dp" />
+        </Constraint>
+        <Constraint android:id="@id/content">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card" />
+            <Transform
+                android:rotationX="0"
+                android:translationY="0dp" />
+        </Constraint>
+        <Constraint android:id="@+id/topPanel">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Transform
+                android:rotationX="0"
+                android:translationY="-80dp" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint android:id="@+id/card">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="-40"
+                android:translationY="100dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card1">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="-40"
+                android:translationY="50dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/card2">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform android:rotationX="-40" />
+        </Constraint>
+        <Constraint
+            android:id="@id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card">
+            <Transform android:translationY="50dp" />
+        </Constraint>
+        <Constraint android:id="@+id/topPanel">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Transform
+                android:rotationX="0"
+                android:translationY="50dp" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
